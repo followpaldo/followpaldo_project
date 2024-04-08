@@ -44,8 +44,8 @@ public class CampListService {
 		return campListMapper.getListCount(camp);
 	}
 
-	public String getDoNm(String regin) {
-		return campListMapper.getDoNm(regin);
+	public String getDoNm(String region) {
+		return campListMapper.getDoNm(region);
 	}
 
 

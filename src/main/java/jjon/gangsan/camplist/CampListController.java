@@ -93,10 +93,10 @@ public class CampListController {
 	//캠핑장 정보 리스트 불러오기
     @RequestMapping("/CampList/{regin}")
     public String callCampList(@RequestParam(value="page",defaultValue="1") int page,
-    		@PathVariable("regin") String regin, Model model) {
+    		@PathVariable("regin") String region, Model model) {
     	
     	//메인페이지의 지역값을 가져와서 doNm으로 변경
-    	String doNm = campListService.getDoNm(regin);
+    	String doNm = campListService.getDoNm(region);
     	
     	
     	//한 페이지의 데이터 출력 갯수
