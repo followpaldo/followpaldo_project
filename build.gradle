@@ -23,16 +23,16 @@ repositories {
 
 dependencies {
      // jakarta jstl
-     compileOnly group: 'jakarta.servlet.jsp', name: 'jakarta.servlet.jsp-api', version: '3.1.1'
-     implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '2.0.0'
+      compileOnly group: 'jakarta.servlet.jsp', name: 'jakarta.servlet.jsp-api', version: '3.1.1'
+      implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '2.0.0'
 
-     compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.0.0'
-    implementation 'jakarta.el:jakarta.el-api:5.0.1'
-    	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'	
-    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
-    implementation group: 'org.json', name: 'json', version: '20180813'
+      compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.0.0'
+      implementation 'jakarta.el:jakarta.el-api:5.0.1'
+      implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'	
+      implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+      implementation group: 'org.json', name: 'json', version: '20180813'
       
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+      implementation 'org.springframework.boot:spring-boot-starter-web'
    
       compileOnly 'org.projectlombok:lombok'
       developmentOnly 'org.springframework.boot:spring-boot-devtools'
