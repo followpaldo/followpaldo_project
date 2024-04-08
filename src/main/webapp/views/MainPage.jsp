@@ -112,9 +112,11 @@
 		<c:forEach items="${regions}" var="region">
 			<option value="${region}	">${region}</option>
 		</c:forEach>
-	</select> <input type="button" value="캠핑장 검색" id="searchButton"
-		onclick="search('camping')"> <input type="button"
-		value="관광지 검색" id="searchButton" onclick="search('tourism')">
+	</select> 
+	
+	<input type="button" value="캠핑장 검색" id="searchButton" onclick="search('camping')"> 
+		
+	<input type="button" value="관광지 검색" id="searchButton" onclick="search('tourism')">
 
 
 
@@ -269,15 +271,14 @@
 
 				<!-- 선택하는 코드 이벤트 J쿼리 코드 -->
 				<script>
-					function search(searchType) {
-						var selectedRegion = document
-								.getElementById("regionSelect").value;
-						var searchUrl = "searchResult.jsp?region="
-								+ encodeURIComponent(selectedRegion) + "&type="
-								+ searchType;
-						window.location.href = searchUrl;
-					}
-				</script>
+               function search(searchType) {
+                  var selectedRegion = document
+                        .getElementById("regionSelect").value.trim();
+                  var searchUrl = "/tour/tourlist/"
+                        +selectedRegion
+                  window.location.href = searchUrl;
+               }
+            </script>
 
 				<!-- 두개의 JSP URL 로 각각 보낼예정 값은 같아도 버튼연동하는 J쿼리문 두개 만들어서 해당 JSP화면으로 보내버리고 
 				 	컨트롤러는 해당해서 -->

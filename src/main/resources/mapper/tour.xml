@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="jjon.gangsan.tour.mapper.TourDao">
+
+	<!-- db등록 -->
+	
+	<insert id="insertTourData" parameterType="tour">
+		insert into tourlist (title, addr1, image, tel, area)
+		values
+			(#{title}, #{addr1}, #{image}, #{tel}, #{area})
+	</insert>
+	
+	   <!-- doNm불러오기 -->
+   <select id="getLocation" resultType="String" parameterType="String">
+      select anum from location_name where region = #{region}
+   </select>
+
+	<!-- 글 갯수 --> 
+	<select id ="getCount" parameterType="String" resultType="int">
+		select count(*) from tourlist where area = #{areaNum}
+	</select>
+	
+	<!-- 글목록 -->
+	<select id="getTourList" parameterType="tour" resultType="tour">
+		select * from tourlist where area = #{area}
+		
+		limit #{start}, 10
+	</select> 
+	
+	</mapper>
+	

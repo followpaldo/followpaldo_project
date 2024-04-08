@@ -1,30 +1,29 @@
-#  application:
-#    name: weatherTest
-
-mybatis:
-    type-aliases-package: com.example.demo.vo
-    mapper-locations: classpath:/mapper/*.xml
-    config-location: classpath:Mybatis-Config.xml
 
 spring:
-  application:
-    name: weatherTest
-   
-  datasource:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/weather?serverTimezone=Asia/Seoul
-      username: weather
-      password: 1234
- 
- 
+ application:
+   name: pollowgangsan
+
+ mvc:
+   view:
+     prefix: /views/
+     suffix: .jsp
+     
+#db-mysql
+ datasource:
+    url: jdbc:mysql://localhost:3306/jsptest
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: totoro
+    password: totoro123
+
+mybatis:
+   type-aliases-package: jjon.gangsan.model
+   mapper-locations: classpath:/mapper/*.xml
+   config-location: classpath:Mybatis-Config.xml
 
 
-   
-  mvc:
-    view:
-      prefix: /views/
-      suffix: .jsp
-      
+
+server:
+ port: 80
 
 
 
