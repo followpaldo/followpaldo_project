@@ -11,7 +11,7 @@
 	integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 	crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="/css/header.css">
 </head>
 <body>
 	<header>
@@ -271,10 +271,9 @@
 				<script>
 					function search(searchType) {
 						var selectedRegion = document
-								.getElementById("regionSelect").value;
-						var searchUrl = "searchResult.jsp?region="
-								+ encodeURIComponent(selectedRegion) + "&type="
-								+ searchType;
+								.getElementById("regionSelect").value.trim();
+						var searchUrl = "/CampList/"
+								+selectedRegion
 						window.location.href = searchUrl;
 					}
 				</script>
