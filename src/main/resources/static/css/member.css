@@ -1,0 +1,283 @@
+/* 공통 */
+main{
+    height: 400px;
+/*     background-color: #F5F5F5; */
+    text-align: center;
+    min-width: 1080px;
+    width: 100%;
+    height: 1080px;
+}
+.inner{
+	margin : auto;
+	max-width:500px;
+}
+
+.inner .logo{
+	margin : auto 80px;
+	padding: 100px 0;
+}
+.inner .logo img{
+	width:320px;
+	heigt:80px;
+}
+
+.m_form{
+	position: relative;
+	width:500px;
+}
+
+.form_list{
+	box-sizing: border-box;
+	display: block;
+	border: 2px soild #ccc;
+	margin-bottom: 40px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px 0 rgba(68,68,68,0.2);
+}
+
+input{
+	box-sizing: border-box;
+	display:block;
+	width:100%;
+	height: 50px;
+	padding : 6px 50px;
+	border-radius: 6px;
+	position: right;
+	cursor: pointer;
+}
+
+.input, button{
+/* 	outline:none; */
+	border: none;
+}
+/* 회원가입 유효성검사 불만족시 warn */
+/* .warn{
+	outline-color: #ff3f3f;
+	color: #ff3f3f;
+	border-color: #ff3f3f;
+} */
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.form_item_user{
+	width:100%;
+	height:50px;
+	margin-bottom : 1px;
+	position:relative;
+}
+.icon{
+	position:absolute;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	top: 50%;
+	left: 5px;
+	margin: 0 20px;
+	transform : translate(-50%,-50%);
+	color: #888;
+
+}
+i.on{
+	color:#ff3f3f;
+}
+
+.input_button{
+	box-sizing: border-box;
+	display:block;
+	width:100%;
+	height: 50px;
+	padding : 6px 50px;
+	border-radius: 6px;
+	position: right;
+	color:#fff;
+	background-color: #333;
+	margin-bottom: 10px;
+}
+
+
+
+/* member_join */
+#divid{
+}
+#divid::before{}
+
+/* 중복확인 버튼 */
+#divid button{
+	position: absolute;
+	width: 90px;
+	height: 40px;
+	top: 0;
+	bottom : 0;
+	right: 10px;
+	margin : auto 0;
+	border-radius : 3px;
+	color: #fff;
+	background-color: #333;
+	cursor: pointer;
+	z-index: 10;
+} 
+#idcheck{
+	display:block;
+	margin-top:-20px;
+	font-size:10px;
+	width: 500px;
+	height: 20px;
+	text-align:left;
+	height: 30px;
+}
+
+#idcheck.on{
+	color: #ff3f3f;
+}
+
+#namecheck{
+	display:block;
+	margin-top:-20px;
+	font-size:10px;
+	width: 500px;
+	height: 20px;
+	text-align:left;
+	height: 30px;
+}
+
+#namecheck.on{
+	color: #ff3f3f;
+}
+
+#divpw{}
+#divpw::before{}
+
+#divtel{}
+#divtel::before{}
+
+#divname{}
+#divname::before{}
+
+#divjumin{}
+#divjumin::before{}
+
+
+#divmail{
+	display:flex;
+}
+#divmail::before{}
+
+#divmail{}
+#divmail::before{}
+
+#gender_from{
+	display:flex;
+/* 	border: 2px soild #DDE2E3; */
+/* 	margin-bottom: 40px; */
+/*     border-radius: 6px; */
+/*     box-shadow: 0 2px 6px 0 rgba(68,68,68,.08); */
+}
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    flex:1;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    background-color : #fff;
+/*     border-radius: 5px; */
+    cursor: pointer;
+}
+
+#gender_m + label{
+	border-radius: 6px 0px 0px 6px;
+	margin-right:-1px;
+	
+}
+#gender_w + label{
+	border-radius: 0px 6px 6px 0px;
+}
+
+input[type="radio"]:checked + label {
+	border-color : #333; 
+    background-color: #333;
+    color: #fff;
+}
+
+.check_wrap{
+	display:flex;
+	justify-content: center;
+}
+input#chk_agree{
+	width: 25px;
+}
+input#chk_agree + label{
+	width:120px;
+	height: 55px;
+	line-height: 55px;
+	font-size: 16px;
+/* 	background-color: pink; */
+	text-align: center;
+}
+
+
+
+/* member_login */
+
+#logincheck{
+	display:none;
+	margin-top:-20px;
+	font-size:10px;
+	width: 500px;
+	height: 20px;
+	text-align:left;
+	height: 30px;
+	color: #ff3f3f;
+}
+#logincheck.on{
+	
+}
+
+
+#kakao_login{
+	cursor: pointer;
+	background-color: #FEE500;
+	margin-bottom: 10px;
+	padding:0;
+}
+
+.kakao_login_a{
+	width:100%;
+	display:block;
+	color:#000;
+	text-decoration: none;
+	line-height: 50px;
+	width:100%;
+	height: 50px;
+}
+
+#kakao_login img{
+	width:20px;
+	height:20px;
+}
+#kakao_login span{
+	display: inline-block;
+	line-height: 30px;
+}
+
+/* member_edit */
+
+
+h3{
+	text-align: left;
+}
+
+/* member_delete */
+.h{
+	font-size : 20px;
+	margin-bottom: 40px;
+}
+
+

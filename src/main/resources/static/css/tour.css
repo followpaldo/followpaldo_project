@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    width: 980px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+ 
+}
+
+.img-area{
+    width: 400px;
+    height: 290px;
+    position: relative;
+    margin: 30px 80px 30px 30px;
+}
+
+.tour-img{
+    width: 400px;
+    height: 290px;
+    position: absolute;
+}
+
+.content-area{
+    width: 440px;
+    margin: 75px 30px 75px 0px;
+}
+
+.title-area{
+    width:440px;
+    height: 70px;
+    margin-bottom: 50px;
+}
+
+.addr-area{
+    width: 440px;
+    height: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.tel-area{
+    width: 440px;
+    height: 30px;
+    font-size: 18px;
+}
+
+.region-area,.page-area{
+    display: flex;
+    justify-content: center;
+}
+
+/*header, footer*/
+    @font-face {
+        font-family: 'Pretend';
+        src: url('path/to/pretend-font.woff2') format('woff2'),
+             url('path/to/pretend-font.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Pretend', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+header {
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    min-width: 1080px;
+    font-family: 'Pretend', sans-serif;
+}
+footer {
+    margin-top: auto;
+    width: 100%;
+    height: 400px;
+    background-color: #F5F5F5;
+    text-align: center;
+    min-width: 1080px;
+    font-family: 'Pretend', sans-serif;
+}
+.foot {
+    height: 400px;
+}
+.head {
+    height: 100%;
+}
+.headinner, .footinner {
+    max-width: 1080px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo, .profile {
+    height: 100%;
+}
+.logo{
+    width: 325px;
+    left: 0;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    right: 0;
+}
+.profile img {
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+.footleft {
+    width: 325px;
+    height: 100%;
+}
+.footleft img {
+    width: 325px;
+    height: 80px;
+    margin-top: 114px;
+}
+.footright {
+    width: 700px;
+    height: 100%;
+}
+.footright1, .footright2{
+    width: 700px;
+}
+.footright1 {
+    font-size: 20px;
+    margin-top: 114px;
+    color: #999999;
+}
+.footright1 a {
+    text-decoration-line: none;
+    color:#707070;
+}
+.footright2 {
+    font-size: 14px;
+    margin-top: 60px;
+    text-align: left;
+    color: #999999;
+}
