@@ -51,7 +51,6 @@ public class TourController {
         JSONArray itemList = (JSONArray) items.get("item");
 		
 		  // 관광지 데이터를 저장할 리스트 생성
-//        List<Tour> tourList = new ArrayList<>();
         
         for (Object itemObj : itemList) {
             JSONObject item = (JSONObject) itemObj;
@@ -64,8 +63,6 @@ public class TourController {
 			tour.setAddr1((String) item.get("addr1"));
 			tour.setTel((String) item.get("tel"));
 			tour.setArea((String) item.get("areacode"));
-			
-//			tourList.add(tour);
 			
 			System.out.println(tour);
 			System.out.println("\n\n");
@@ -85,27 +82,34 @@ public class TourController {
 		@RequestMapping("/tourlist/{region}")
 		public String tourlist(@RequestParam(value="page", defaultValue="1") int page, @PathVariable("region") String region, Model model) {
 			
-			
+			//메인페이지에서 선택한 지역을 통해 관광지 areacode를 areaNum에 저장
 			String areaNum = service.getLocation(region);
 			
+			Tour tour = new Tour();
+			
+			//areaNum을 dto에 저장
+			tour.setArea(areaNum);
+			
+			//tour 정보를 저장할 list 생성
 			List<Tour> tourlist = new ArrayList<Tour>();
 			
-			Tour tour = new Tour();
-			tour.setArea(areaNum);
+
 			
 			//화면에 출력할 최대 개수
 			int limit = 10;
 			
 			//컬럼 자르기
 			int start = (page -1) * limit;
+			
+			//start페이지를 dto에 저장
 			tour.setStart(start);
 			
-			//데이터 개수
+			//각 areaNum에 해당하는 list의 개수
 			int listcount = service.getCount(areaNum);
 			
 			System.out.println("listcount:"+listcount);
 			
-			//페이지번호(page)를 DAO 클래스에게 전달한다.
+			//list에 dto정보를 저장
 			tourlist = service.getTourList(tour);
 			
 			//총 페이지 수
