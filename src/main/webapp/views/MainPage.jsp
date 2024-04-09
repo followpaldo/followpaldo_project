@@ -22,12 +22,12 @@
 		<div class="head">
 			<div class="headinner">
 				<div class="logo">
-					<a href="../views/MainPage.jsp" class="logo"> <img
+					<a href="../views" class="logo"> <img
 						src="/image/Follow8°_white.svg" class="logo">
 					</a>
 				</div>
 				<div class="profile">
-					<a href="../views/MyPage.jsp"> <img src="/image/profile.svg"
+					<a href="../views/MyPage"> <img src="/image/profile.svg"
 						class="profile">
 					</a>
 				</div>
@@ -121,11 +121,9 @@
 	
 	<input type="button" value="캠핑장 검색" id="searchButton" onclick="search('camping')"> 
 		
-	<input type="button" value="관광지 검색" id="searchButton" onclick="search('tourism')">
+	<input type="button" value="관광지 검색" id="searchButton" onclick="search2('tourism')">
 
-	</select> <input type="button" value="캠핑장 검색" id="searchButton"
-		onclick="search('camping')"> <input type="button"
-		value="관광지 검색" id="searchButton" onclick="search('tourism')">
+	</select> 
 
 
 
@@ -285,10 +283,18 @@
                function search(searchType) {
                   var selectedRegion = document
                         .getElementById("regionSelect").value.trim();
-                  var searchUrl = "/tour/tourlist/"
+                  var searchUrl = "/CampList/"
                         +selectedRegion
                   window.location.href = searchUrl;
                }
+               function search2(searchType) {
+                   var selectedRegion = document
+                         .getElementById("regionSelect").value.trim();
+                   var searchUrl = "/tourlist/"
+                         +selectedRegion
+                   window.location.href = searchUrl;
+                }
+             
           
 				</script>
 

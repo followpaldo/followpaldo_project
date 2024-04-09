@@ -19,12 +19,12 @@
         <div class="head">
             <div class="headinner">
                 <div class="logo">
-                    <a href="../views/MainPage.jsp" class="logo">
+                    <a href="../views" class="logo">
                         <img src="/image/Follow8°_white.svg" class="logo">
                     </a>
                 </div>
                 <div class="profile">
-                    <a href="../views/MyPage.jsp">
+                    <a href="../views/MyPage">
                         <img src="/image/profile.svg" class="profile">
                     </a>
                 </div> 

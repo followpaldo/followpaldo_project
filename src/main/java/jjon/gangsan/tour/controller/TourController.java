@@ -21,7 +21,7 @@ import jjon.gangsan.model.Tour;
 import jjon.gangsan.tour.service.TourService;
 
 @Controller
-@RequestMapping("/tour")
+
 public class TourController {
 	
 	@Autowired
@@ -33,7 +33,7 @@ public class TourController {
 	}
 	//데이터 받아오기
 	@RequestMapping("/data")
-	public String getTourData() {
+	public void getTourData() {
 	try {
 		String result = "";
 		URL url = new URL("https://apis.data.go.kr/B551011/KorService1/areaBasedList1?numOfRows=13052&MobileOS=ETC&MobileApp=test&_type=json&contentTypeId=12&serviceKey=Mw0yWnqdtivA2wZZKzokuFO74a9MrdXQqDB5Z3ql1UciOQIBqC5wdo380OfmoHfC6sihqb0E9kgUs3IYfj9unQ%253D%253D");
@@ -75,7 +75,7 @@ public class TourController {
 	} catch(Exception e) {
 		e.printStackTrace();
 	}
-		return "result";
+		
 	}
 	
 	//투어리스트 boardbean=Tour
