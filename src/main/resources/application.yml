@@ -1,4 +1,5 @@
 
+
 spring:
  application:
    name: pollowgangsan
@@ -24,6 +25,35 @@ mybatis:
 
 server:
  port: 80
+=======
+#  application:
+#    name: weatherTest
+
+mybatis:
+    type-aliases-package: jjon.gangsan.model
+    mapper-locations: classpath:/mapper/*.xml
+    config-location: classpath:Mybatis-Config.xml
+
+spring:
+  application:
+    name: pollowgangsan
+    
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+   
+  datasource:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/followgangsan
+      username: followgangsan
+      password: 1234
+ 
+#port
+server:
+  port: 80
+
+
 
 
 
