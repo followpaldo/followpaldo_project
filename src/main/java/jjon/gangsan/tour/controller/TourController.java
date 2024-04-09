@@ -107,7 +107,6 @@ public class TourController {
 			//각 areaNum에 해당하는 list의 개수
 			int listcount = service.getCount(areaNum);
 			
-			System.out.println("listcount:"+listcount);
 			
 			//list에 dto정보를 저장
 			tourlist = service.getTourList(tour);
