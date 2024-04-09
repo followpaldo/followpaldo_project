@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+
+  
+
+<mapper namespace="jjon.gangsan.member.mapper.MemberDaoImpl">
+<!-- <mapper namespace="MemberDao"> -->
+	
+	<!-- 회원가입 -->
+	<insert id="member_join_go" parameterType="member">
+     	insert into member (user_id,user_pw,user_phone,user_name,user_jumin,user_email,user_gender,kakao)
+     	values (#{userId},#{userPw},#{userPhone},#{userName},#{userJumin},#{userEmail},#{userGender},0)
+    </insert>
+
+	<!-- id중복검사  -->
+	<select id="user_id_check" parameterType="String" resultType="int">
+    	select count(*) from member where user_id = #{userId};
+    </select>
+    
+	<!-- 로그인 인증-->
+    <select id="user_check" parameterType="String" resultType="member">
+    	select * from member where user_id=#{userId}
+    </select>
+    
+    <!-- 회원수정 -->
+    <select id="member_edit_go" parameterType="member" >
+    	update member set user_pw=#{userPw},user_phone=#{userPhone},user_name=#{userName},
+    	user_jumin=#{userJumin},user_email=#{userEmail},user_gender=#{userGender},kakao=0 where user_id=#{userId}
+    </select>
+    
+    <!-- 회원삭제 -->
+	<select id="member_delete_go" parameterType="String">
+		delete from member where user_id=#{userId}
+	</select>
+</mapper>
