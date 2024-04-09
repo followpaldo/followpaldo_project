@@ -16,7 +16,7 @@
         <div class="head">
             <div class="headinner">
                 <div class="logo">
-                    <a href="../views/MainPage.jsp" class="logo">
+                    <a href="../views" class="logo">
                         <img src="./image/Follow8°_white.svg" class="logo">
                     </a>
                 </div>
