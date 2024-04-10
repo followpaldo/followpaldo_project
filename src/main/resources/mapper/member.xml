@@ -10,7 +10,7 @@
 	
 	<!-- 회원가입 -->
 	<insert id="member_join_go" parameterType="member">
-     	insert into member (user_id,user_pw,user_phone,user_name,user_jumin,user_email,user_gender,kakao_login)
+     	insert into member (user_id,user_pw,user_phone,user_name,user_jumin,user_email,user_gender,kakao)
      	values (#{userId},#{userPw},#{userPhone},#{userName},#{userJumin},#{userEmail},#{userGender},0)
     </insert>
 
