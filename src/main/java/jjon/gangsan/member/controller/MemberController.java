@@ -28,6 +28,13 @@ public class MemberController {
 	@Autowired
 	private MemberServiceImpl memberService;
 	
+	
+	// 마이페이지
+	@GetMapping("member_mypage")
+	public String member_mypage() {
+		return "member_mypage";
+	}
+	
 	//회원가입폼
 	@RequestMapping("/member_join")
 	public String member_join() {
@@ -144,7 +151,7 @@ public class MemberController {
 		
 		model.addAttribute("user_name", member.getUserName());
 		
-		return "kakao_connpage";
+		return "member_mypage";
 	}
 	
 	

@@ -107,12 +107,12 @@ public class KakaoController {
 					session.setAttribute("id", user_id);
 					System.out.println("카카오 간편로그인 성공!");
 					// 같다면 마이페이지로 이동
-					return "kakao_mypage";
+					return "member_mypage";
 				}
 			}
 		}
 		// 같지 않다면 다시 로그인폼으로 이동
-		return "member_login";
+		 return "member_login";
 	}
     
 	// 카카오 로그아웃을 위한 로직

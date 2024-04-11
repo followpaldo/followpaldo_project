@@ -37,7 +37,7 @@
 	
 	<!-- 카카오 간편로그인을 위한 select문 -->
 	<select id = "selectKakao" parameterType = "String" resultType = "Integer">
-		select kakao_login from member where user_email = #{kakaoEmail}
+		select kakao from member where user_email = #{kakaoEmail}
 	</select>
 	
 	<!-- 카카오 연동&간편로그인을 위한 select문 -->
@@ -47,7 +47,7 @@
 	
 	<!-- kakao 인증 업데이트 -->
 	<update id = "updateKakao" parameterType = "String">
-		update member set kakao_login = 1 where user_email = #{kakaoEmail}
+		update member set kakao = 1 where user_email = #{kakaoEmail}
 	</update>
 	
 	<!-- 간편 로그인에서 user_id값을 받아오기 위한 select 문 -->
