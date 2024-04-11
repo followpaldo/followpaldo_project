@@ -15,9 +15,9 @@ spring:
      initialize-schema: always # 스키마를 초기화합니다.     
 #db-mysql
  datasource:
-      url: jdbc:mysql://localhost:3306/testProject
+      url: jdbc:mysql://localhost:3306/followgangsan
       driver-class-name: com.mysql.cj.jdbc.Driver
-      username: test
+      username: followgangsan
       password: 1234
 
 mybatis:

@@ -188,7 +188,7 @@ public class MemberController {
 		public String zzim(Model model, @RequestParam(value="page", defaultValue = "1") int page, HttpSession session, HttpServletRequest request) {
 			session = request.getSession();
 			// 현재 세션에 저장된 "user_id"키 값을 불러와 문자열 변수에 저장
-			String user_id = (String) session.getAttribute("userId");
+			String user_id = (String) session.getAttribute("id");
 			// 현재 로그인한 유저의 id 출력
 			System.out.println(user_id);
 			// 페이지 당 보여줄 데이터 개수
@@ -197,7 +197,7 @@ public class MemberController {
 			// 현재 로그인한 유저의 찜목록 수 조회
 			int listCount = memberService.countZzimList(user_id);
 			// 찜목록 수 출력
-			System.out.println(listCount);
+			System.out.println("listCount"+listCount);
 			
 			int start = (page - 1) * pageSize;
 			
@@ -208,7 +208,7 @@ public class MemberController {
 			
 			// 현재 페이지 / 페이디 장 보여줄 데이터 개수 / 현재 로그인한 유저 id 값을 넘겨줌
 			List<ZzimList> zzimList = memberService.getZzimList(m);
-			System.out.println(zzimList);
+			System.out.println("zzimList"+zzimList);
 			
 			// 전체 페이지 수를 계산합니다. 페이지당 게시글 수로 나눈 몫에 1을 더하고, 나머지가 있는 경우 1을 더해줍니다. 100 / 10 + ((100 % 10 == 0) ? 0 : 1 );
 			int maxpage = listCount / pageSize + ((listCount % pageSize == 0) ? 0 : 1);

@@ -155,11 +155,17 @@ public class CampListController {
 	@PostMapping("/zzim")
 	@ResponseBody
 	public ResponseEntity<Integer> zzimClick(@RequestBody CampListZzimVO zzimVO,
-			HttpServletRequest request, Model model) {   
+			HttpServletRequest request, Model model, HttpSession session) {   
 
+		String userId = (String) session.getAttribute("id");
+		System.out.println("아디 찍어바"+userId);
+		System.out.println(zzimVO.getContent_id());
+		
+		zzimVO.setUser_id(userId);
+		
 		//세션값에 저장된 user_id 사용자의 찜한 content_id list 형식으로 가져오기
 		//sid 값을 가진 (contentid 리스트로 받기)
-		String userId = zzimVO.getUserId();
+		//String userId = zzimVO.getUserId();
 		List<String> zzimList = new ArrayList<String>();
 		zzimList = campListService.getZzimList(userId);
 		
