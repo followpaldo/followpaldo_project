@@ -7,7 +7,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>찜목록 페이지</title>
-    <link href ="css/zzimList.css" rel="stylesheet" type=""text/css" />
+    <link href ="css/zzimList.css" rel="stylesheet" type="text/css" />
     <!-- j쿼리 파일저장 경로!!-->
     <script></script>
     
@@ -42,7 +42,7 @@
                         ${item.zzimNo}
                     </div>
                     <div class = "first_image_url">
-                        이미지경로
+                        <img class="campImage" src="${item.firstImageUrl}">
                     </div>
                     <div class = "contentList">
                         <div>캠핑장 이름 : ${item.facltNm}<br><br></div>
