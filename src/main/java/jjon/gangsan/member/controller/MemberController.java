@@ -144,7 +144,7 @@ public class MemberController {
 		
 		model.addAttribute("user_name", member.getUserName());
 		
-		return "kakao_connpage";
+		return "member_mypage";
 	}
 	
 	
