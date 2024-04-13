@@ -2,5 +2,5 @@
 
 
 
-![Follow8°_black](https://github.com/followpaldo/followpaldo_project/assets/151708233/333d689f-b45a-498f-9b56-4318beda2421)
+<img src="https://github.com/followpaldo/followpaldo_project/assets/151708233/333d689f-b45a-498f-9b56-4318beda2421" align="center" width="300">
 
