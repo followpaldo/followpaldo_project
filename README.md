@@ -5,6 +5,8 @@
 <br>
 <p align="center"><img src="https://github.com/followpaldo/followpaldo_project/assets/151708233/333d689f-b45a-498f-9b56-4318beda2421" width="450" height="300"></p>
 
+
+<div style="font-family: 'Pretendard Variable', sans-serif;">
 ## 프로젝트 소개
 날씨 공공데이터 API 를 활용한 캠핑장 검색, 관광지 검색을 하는 웹 서비스입니다.
 <br>
@@ -29,13 +31,6 @@
 - Spring Boot, JDK 17, MyBatis, MySQL
 #### 코드 관리
 - GitHub + SourceTree
-  
+
 </div>
-<style>
-
-.git {
-font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
- }
-</style>
-
-
+  
