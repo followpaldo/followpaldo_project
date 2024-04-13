@@ -21,13 +21,13 @@
 ### 개발환경
 <br>
  프론트엔드
-  - 'html' , 'css', 'js+jquery' , 'jsp'
+  - html , css, js+jquery , jsp
 <br>
  백엔드
-- 'spring boot', 'jdk-17', 'mybatis' , 'mysql'
+- spring boot, jdk-17, mybatis , mysql
 <br>
  코드관리
-- 'git hub + source tree'
+- git hub + source tree
   
   
 
