@@ -1,3 +1,5 @@
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+<div className="git">
 # 팀프로젝트 - followpaldo
 스프링부트 + JSP 날씨API 활용한 캠핑장, 관광지 검색
 <br>
@@ -19,18 +21,21 @@
 - 팀원 남영하
 <br>
 
-### 개발환경
+### 개발 환경
 
-<br>
- 프론트엔드
-  - html , css, js+jquery , jsp
-<br>
- 백엔드
-- spring boot, jdk-17, mybatis , mysql
-<br>
- 코드관리
-- git hub + source tree
+#### 프론트엔드
+- HTML, CSS, JavaScript(jQuery), JSP
+#### 백엔드
+- Spring Boot, JDK 17, MyBatis, MySQL
+#### 코드 관리
+- GitHub + SourceTree
   
-  
+</div>
+<style>
+
+.git {
+font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+ }
+</style>
 
 
